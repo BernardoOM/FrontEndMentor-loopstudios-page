@@ -1,0 +1,147 @@
+.navbar {
+    width: 100%;
+    min-height: 24px;
+    padding: 2.5em 1.625em 0 1.5em;
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.navbar.active {
+    border: 1em solid #fff;
+}
+
+.navbar-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navbar-logo {
+    width: 100%;
+    padding: 0.75em 0 0.25em 0.75em;
+}
+
+.navbar-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-icon {
+    height: 24px;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+    order: 2;
+}
+
+.navbar-icon.footer {
+    display: none;
+}
+
+.nav-menu {
+    margin: 9.9375em 0;
+    padding: 1em;
+    display: none;
+    flex-direction: column;
+    list-style: none;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-menu.footer {
+    width: 100%;
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-item {
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    padding-bottom: 0.35em;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.5;
+    background-image: linear-gradient(90deg, #fff, #fff);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 300ms ease;
+    outline: none;
+}
+
+.nav-link.footer {
+    text-transform: capitalize;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-size: 100% 3px;
+}
+
+@media (min-width: 960px) {
+    .navbar {
+        padding-right: 0;
+    }
+
+    .navbar-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar-content {
+        width: 90%;
+    }
+
+    .navbar-logo {
+        margin-left: 10em;
+        padding: 1px 0 1px 0;
+    }
+
+    .navbar-icon {
+        display: none;
+    }
+
+    .nav-menu {
+        width: 100%;
+        margin: 0;
+        margin-right: 8em;
+        padding: 1px;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-link {
+        margin: 0 1em;
+        font-size: 0.9375rem;
+        padding-bottom: 0;
+        text-transform: capitalize;
+    }
+}
