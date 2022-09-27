@@ -1,34 +1,30 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import Navbar from "../Navbar"
-import "../../styles/Home.css"
-import ItemBox from "../ItemBox"
-import useWindowSize from "../../hooks/useWindowSize"
+import Navbar from "../components/Navbar"
+import "../styles/Home.css"
+import ItemBox from "../components/ItemBox"
+import useWindowSize from "../hooks/useWindowSize"
+import Footer from "../components/Footer"
 //Desktop Images
-import d_int from "../../images/desktop/image-interactive.jpg"
-import d_deep_earth from "../../images/desktop/image-deep-earth.jpg"
-import d_night_arcade from "../../images/desktop/image-night-arcade.jpg"
-import d_soccer_team from "../../images/desktop/image-soccer-team.jpg"
-import d_grid from "../../images/desktop/image-grid.jpg"
-import d_from_above from "../../images/desktop/image-from-above.jpg"
-import d_pocket_borealis from "../../images/desktop/image-pocket-borealis.jpg"
-import d_fisheye from "../../images/desktop/image-fisheye.jpg"
-import d_curiosity from "../../images/desktop/image-curiosity.jpg"
-//Icon Images
-import fb_icon from "../../images/icon-facebook.svg"
-import tw_icon from "../../images/icon-twitter.svg"
-import pint_icon from "../../images/icon-instagram.svg"
-import inst_icon from "../../images/icon-pinterest.svg"
+import d_int from "../images/desktop/image-interactive.jpg"
+import d_deep_earth from "../images/desktop/image-deep-earth.jpg"
+import d_night_arcade from "../images/desktop/image-night-arcade.jpg"
+import d_soccer_team from "../images/desktop/image-soccer-team.jpg"
+import d_grid from "../images/desktop/image-grid.jpg"
+import d_from_above from "../images/desktop/image-from-above.jpg"
+import d_pocket_borealis from "../images/desktop/image-pocket-borealis.jpg"
+import d_fisheye from "../images/desktop/image-fisheye.jpg"
+import d_curiosity from "../images/desktop/image-curiosity.jpg"
 //Mobile Images
-import m_deep_earth from "../../images/mobile/image-deep-earth.jpg"
-import m_night_arcade from "../../images/mobile/image-night-arcade.jpg"
-import m_soccer_team from "../../images/mobile/image-soccer-team.jpg"
-import m_grid from "../../images/mobile/image-grid.jpg"
-import m_from_above from "../../images/mobile/image-from-above.jpg"
-import m_pocket_borealis from "../../images/mobile/image-pocket-borealis.jpg"
-import m_fisheye from "../../images/mobile/image-fisheye.jpg"
-import m_curiosity from "../../images/mobile/image-curiosity.jpg"
-import m_int from "../../images/mobile/image-interactive.jpg"
+import m_deep_earth from "../images/mobile/image-deep-earth.jpg"
+import m_night_arcade from "../images/mobile/image-night-arcade.jpg"
+import m_soccer_team from "../images/mobile/image-soccer-team.jpg"
+import m_grid from "../images/mobile/image-grid.jpg"
+import m_from_above from "../images/mobile/image-from-above.jpg"
+import m_pocket_borealis from "../images/mobile/image-pocket-borealis.jpg"
+import m_fisheye from "../images/mobile/image-fisheye.jpg"
+import m_curiosity from "../images/mobile/image-curiosity.jpg"
+import m_int from "../images/mobile/image-interactive.jpg"
 
 export function Home() {
     const [clickIcon, setClickIcon] = useState(false)
@@ -71,7 +67,7 @@ export function Home() {
                     <h2 class={windowDesktopSize ? "content-title desktop" : "content-title"}>
                         Our creations
                     </h2>
-                    <Link to="/products" className="btn-see-all">
+                    <Link to="/" className="btn-see-all">
                         See all
                     </Link>
                     <div className="items-container">
@@ -107,28 +103,7 @@ export function Home() {
                     </div>
                 </div>
             </main>
-            <footer className="footer-container">
-                <div className={windowDesktopSize ? "navbar-desktop" : ""}>
-                    <Navbar isNavFooter={true} />
-                </div>
-                <div className="social-links-container">
-                    <div className="social-links">
-                        <Link className="social-link">
-                            <img src={fb_icon} alt="icon-fb" />
-                        </Link>
-                        <Link className="social-link">
-                            <img src={tw_icon} alt="icon-tw" />
-                        </Link>
-                        <Link className="social-link">
-                            <img src={pint_icon} alt="icon-pint" />
-                        </Link>
-                        <Link className="social-link">
-                            <img src={inst_icon} alt="icon-inst" />
-                        </Link>
-                    </div>
-                    <p className="footer-body">&copy; 2022 Loopstudios. All rights reserved</p>
-                </div>
-            </footer>
+            <Footer />
         </div>
     )
 }
